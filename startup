@@ -1,0 +1,14 @@
+echo "Create virtualenv"
+python -m venv venv
+
+echo "active virtualenv"
+source $PWD/venv/bin/activate
+
+echo "Install Django"
+pip install django
+
+echo "Create Django project"
+django-admin startproject demo .
+
+echo "Run server"
+python manage.py runserver
